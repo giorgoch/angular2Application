@@ -1,7 +1,7 @@
-import { Component, Input, Injectable} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { OnInit } from "@angular/core";
 import { Hero } from "./heroShared/hero.model";
-import { HeroService } from "./hero.service";
+import { HeroService } from "./heroShared/hero.service";
 
 
 
@@ -11,17 +11,17 @@ import { HeroService } from "./hero.service";
   styleUrls: ['./app.component.css'],
   providers: [HeroService]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit  {
 
   title = 'Tour of Heroes';
-  heroes = Hero[];
+  heroes : Hero[];
   selectedHero: Hero;
 
   ngOnInit(): void {
     this.getHeroes();
   }
 
-  getHeroes(): void {
+getHeroes(): void {
     this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 
