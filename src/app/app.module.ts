@@ -9,6 +9,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroService } from "./heroShared/hero.service";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -20,13 +21,11 @@ import { HeroService } from "./heroShared/hero.service";
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     HttpModule
   ],
-  providers: [
-
-    HeroService
-  ],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

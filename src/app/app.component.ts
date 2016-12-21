@@ -11,10 +11,10 @@ import { HeroService } from "./heroShared/hero.service";
   styleUrls: ['./app.component.css'],
   providers: [HeroService]
 })
-export class AppComponent implements OnInit  {
+export class AppComponent  {
 
   title = 'Tour of Heroes';
-  heroes : Hero[];
+  /*heroes : Hero[];
   selectedHero: Hero;
 
   ngOnInit(): void {
@@ -29,5 +29,5 @@ getHeroes(): void {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
-  }
+  }*/
 }
