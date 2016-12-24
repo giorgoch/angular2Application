@@ -1,6 +1,6 @@
-import { Component ,Input,Injectable} from '@angular/core';
-import { Hero } from "./heroShared/hero.model";
-
+<<<<<<< HEAD
+import { Component } from '@angular/core';
+import { Hero } from "./Hero";
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -14,21 +14,50 @@ const HEROES: Hero[] = [
   { id: 19, name: 'Magma' },
   { id: 20, name: 'Tornado' }
 ];
+=======
+import { Component, Input} from '@angular/core';
+import { OnInit } from "@angular/core";
+import { Hero } from "./heroShared/hero.model";
+import { HeroService } from "./heroShared/hero.service";
+
+
+>>>>>>> 2e6d7302e8cbf1ef833144e3f955aebf835d8b84
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+<<<<<<< HEAD
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-
-
+  title = 'Tour of Heroes';
   heroes = HEROES;
   selectedHero: Hero;
-  title = 'Tour of Heroes';
-
-  onSelect(hero: Hero) : void  {
-    this.selectedHero=hero;
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
   }
+=======
+  styleUrls: ['./app.component.css'],
+  providers: [HeroService]
+})
+export class AppComponent  {
+
+  title = 'Tour of Heroes';
+  /*heroes : Hero[];
+  selectedHero: Hero;
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
+
+getHeroes(): void {
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+  }
+
+  constructor(private heroService: HeroService) { }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }*/
+>>>>>>> 2e6d7302e8cbf1ef833144e3f955aebf835d8b84
 }
