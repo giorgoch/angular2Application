@@ -59,5 +59,15 @@ describe('TodoDataService', () => {
       expect(updatedTodo)=service.toEqual(null);
     }));
   });
-  
+
+  describe('#toogleTodoComplete(todo)',()=>{
+    it('should return the updated todo with inverse complete status',inject([TodoDataService],(service:TodoDataService)=>{
+      let todo = new Todo({title:'Hello 1',complete:false});
+      service.addTodo(todo);
+      let updatedTodo= service.toggleTodoComplete(todo);
+      expect(updatedTodo.complete).toEqual(true);
+      service.toggleTodoComplete(todo);
+      expect(updatedTodo.complete).toEqual(false);
+    }));
+  });
 });
