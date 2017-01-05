@@ -15,14 +15,8 @@ export class GithubComponent implements OnInit {
 
   constructor(private githubService: GitHubService) {
 
-    this.githubService.getUser().subscribe(user => {
-      this.user = user;
-      console.log(this.user)
-    });
+    this.user=false;
 
-    this.githubService.getRepos().subscribe(repos => {
-      this.repos = repos;
-    });
   }
 
   search() {
