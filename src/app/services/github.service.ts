@@ -14,4 +14,11 @@ private username ='giorgoch';
     getUser(){
         return this._http.get('http://api.github.com/users/'+this.username).map(res=>res.json());
     }
+
+    getRepos(){
+        return this._http.get('http://api.github.com/users/'+this.username+'/repos').map(res=>res.json());
+    }
+    updateUsername(username : any ){
+        this.username=username;
+    }
 }
