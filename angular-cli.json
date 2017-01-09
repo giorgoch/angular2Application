@@ -1,7 +1,11 @@
 {
   "project": {
     "version": "1.0.0-beta.22-1",
+<<<<<<< HEAD
     "name": "app-profile"
+=======
+    "name": "application"
+>>>>>>> origin/master
   },
   "apps": [
     {

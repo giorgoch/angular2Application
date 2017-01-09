@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { AppProfilePage } from './app.po';
 
 describe('app-profile App', function() {
@@ -5,6 +6,15 @@ describe('app-profile App', function() {
 
   beforeEach(() => {
     page = new AppProfilePage();
+=======
+import { ApplicationPage } from './app.po';
+
+describe('application App', function() {
+  let page: ApplicationPage;
+
+  beforeEach(() => {
+    page = new ApplicationPage();
+>>>>>>> origin/master
   });
 
   it('should display message saying app works', () => {
