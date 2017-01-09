@@ -15,7 +15,7 @@ export class GithubComponent implements OnInit {
 
   constructor(private githubService: GitHubService) {
 
-    this.user=false;
+    //this.user=false;
 
   }
 
